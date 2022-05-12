@@ -15,7 +15,7 @@ const LogicTestForm: React.FC = () => {
 
   const submit = (): void => {
     if (!n) {
-      toast('Preencha o campo necessário', {
+      toast('O número precisa ser maior que 0!', {
         position: toast.POSITION.BOTTOM_CENTER,
         type: 'error',
         autoClose: 2000,

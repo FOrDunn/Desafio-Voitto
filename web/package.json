@@ -1,5 +1,6 @@
 {
   "name": "physics-calc-hack",
+  "author": "Juan Cruz Blandi",
   "version": "0.1.0",
   "private": true,
   "scripts": {

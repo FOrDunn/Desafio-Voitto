@@ -1,10 +1,15 @@
-import Aluno from '../../models/Aluno';
+import CursoAluno from '../../models/CursoAluno';
 
-class AtribuirCursoAlunoService {
-  async execute({ id_aluno, id_curso }) {
-    // TODO
-    return true;
+class CursoAlunoController {
+  async create(req, res) {
+    const novoCursoAluno = req.body;
+    try {
+      const cursoAtribuido = await CursoAluno.create(novoCursoAluno);
+      return res.json(cursoAtribuido);
+    } catch (error) {
+      return res.status(500).json(error.message);
+    }
   }
 }
 
-export default new AtribuirCursoAlunoService();
+export default new CursoAlunoController();
